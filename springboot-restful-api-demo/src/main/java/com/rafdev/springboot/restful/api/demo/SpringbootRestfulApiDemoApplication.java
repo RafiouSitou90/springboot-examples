@@ -23,8 +23,4 @@ public class SpringbootRestfulApiDemoApplication {
         SpringApplication.run(SpringbootRestfulApiDemoApplication.class, args);
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
-    }
 }

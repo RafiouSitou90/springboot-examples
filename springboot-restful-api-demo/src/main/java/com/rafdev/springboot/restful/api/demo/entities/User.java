@@ -42,7 +42,7 @@ public class User extends BaseEntity
     @NotBlank
     private String password;
 
-    @ManyToMany(targetEntity = Role.class)
+    @ManyToMany(targetEntity = Role.class, fetch = FetchType.EAGER)
     @JoinTable(
             name = "tab_user_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),

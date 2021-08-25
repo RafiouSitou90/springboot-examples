@@ -2,11 +2,14 @@ package com.rafdev.springboot.restful.api.demo.filter;
 
 import com.rafdev.springboot.restful.api.demo.services.impls.UserServiceImpl;
 import com.rafdev.springboot.restful.api.demo.utility.JwtUtility;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
